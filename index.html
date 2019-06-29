@@ -1,25 +1,254 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-us">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Fishtank</title>
+    <title>Jerry's Fishtank</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/700c7a8f41.js"></script>
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
+
+
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Web1.json", {onProgress: UnityProgress});
-    </script>
-  </head>
-  <body>
+        var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Web1.json", { onProgress: UnityProgress });
+
+/**/</script>
+</head>
+<body>
     <div class="webgl-content">
-      <div id="unityContainer" style="width: 960px; height: 600px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">Fishtank</div>
-      </div>
+        <div id="unityContainer"></div>
+        <!--      <div id="unityContainer" style="width: 960px; height: 600px"></div>-->
+        <!--<div class="footer">
+            <div class="webgl-logo"></div>
+            <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+            <div class="title">Fishtank</div>
+        </div>-->
     </div>
-  </body>
+
+    <div class="button-container">
+        <button class="btn btn-primary button info-button">
+            <i class="fa fa-info"></i>
+        </button>
+        <button class="btn btn-primary button fullscreen-button" onclick="unityInstance.SetFullscreen(1)">
+            <i class="fa fa-window-maximize"></i>
+        </button>
+        <button class="btn btn-primary button refresh-button" onclick="window.location.reload(false); ">
+            <i class="fa fa-redo"></i>
+        </button>
+    </div>
+    <div class="info info-top">
+
+        <!-- TODO: actual info page -->
+
+        <div class="info-content">
+            <div style="text-align: left; margin-left: 80px">gh</div>
+
+            <div style="width: 300%; text-align: left; transform: translate(-20%,0%);">j</div>
+
+            <div style="margin-right:8%">Hi my name is Jesse.</div>
+            <div style="margin-bottom: 3%;">how the fuck are ya cunt?</div>
+            <div style="margin-left:8%; margin-bottom: 6%">I love playing god withf</div>
+            <div style="margin-bottom: 10%; text-align:left">fucking fish daaaawg</div>
+
+            <a href="https://jesseholwell.azurewebsites.net" class="my-link">
+                <span>Made with <i class="fa fa-heart"></i> by Jesse</span>
+            </a>
+        </div>
+    </div>
+</body>
 </html>
+
+<script>
+    $(function () {
+
+        var visible = false;
+        $(".info-button").click(function (i, e) {
+
+
+
+            if (visible) {
+                visible = false;
+                $(".info").slideUp();
+            }
+            else {
+                visible = true;
+                $(".info").slideDown();
+            }
+
+        })
+
+    })
+</script>
+
+<style>
+
+    body {
+        /*background-image: radial-gradient(circle, #c85c91, #0ab399, #1299ad);*/
+        background-color: #c85c91;
+        overflow: hidden;
+    }
+
+    a.my-link {
+        margin-top: 10%;
+        color: white;
+        text-decoration: underline;
+        font-size: .5em;
+    }
+
+    .typewriter {
+        font-family: Courier New, Courier, monospace;
+    }
+
+
+    .info {
+        height: 100%;
+        width: 100%;
+        background-color: #fc715d;
+        color: #1c19a9;
+        font-size: 3em;
+        display: none;
+        text-align: center;
+        vertical-align: middle
+    }
+
+        .info.info-top {
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+
+        .info .info-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -55%);
+            transform: translate(-50%, -55%);
+        }
+
+
+    .button-container {
+        /*background-color: magenta;*/
+        border: 0;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 1%;
+        right: 1%;
+        z-index: 999;
+        justify-content: space-around;
+    }
+
+        .button-container .btn {
+        }
+
+        .button-container .btn-primary {
+            background-color: #302dab;
+            border-color: #302dab;
+        }
+
+            .button-container .btn-primary:hover {
+                color: #fff;
+                background-color: #1c19a9;
+                border-color: #1c19a9;
+            }
+
+    /*Unity stuff*/
+
+    #unityContainer {
+        width: 100%;
+        height: 100%;
+    }
+
+    .webgl-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 101%; /*random line at the bottom*/
+    }
+
+        .webgl-content .logo, .progress {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .webgl-content .logo {
+            background: url('progressLogo.Light.png') no-repeat center / contain;
+            width: 154px;
+            height: 130px;
+        }
+
+        .webgl-content .progress {
+            height: 18px;
+            width: 141px;
+            margin-top: 90px;
+        }
+
+            .webgl-content .progress .empty {
+                background: url('progressEmpty.Light.png') no-repeat right / cover;
+                float: right;
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+            }
+
+            .webgl-content .progress .full {
+                background: url('progressFull.Light.png') no-repeat left / cover;
+                float: left;
+                width: 0%;
+                height: 100%;
+                display: inline-block;
+            }
+
+        .webgl-content .logo.Dark {
+            background-image: url('progressLogo.Dark.png');
+        }
+
+        .webgl-content .progress.Dark .empty {
+            background-image: url('progressEmpty.Dark.png');
+        }
+
+        .webgl-content .progress.Dark .full {
+            background-image: url('progressFull.Dark.png');
+        }
+
+        .webgl-content .footer {
+            margin-top: 5px;
+            height: 38px;
+            line-height: 38px;
+            font-family: Helvetica, Verdana, Arial, sans-serif;
+            font-size: 18px;
+        }
+
+            .webgl-content .footer .webgl-logo, .title, .fullscreen {
+                height: 100%;
+                display: inline-block;
+                background: transparent center no-repeat;
+            }
+
+            .webgl-content .footer .webgl-logo {
+                background-image: url('webgl-logo.png');
+                width: 204px;
+                float: left;
+            }
+
+            .webgl-content .footer .title {
+                margin-right: 10px;
+                float: right;
+            }
+
+            .webgl-content .footer .fullscreen {
+                background-image: url('fullscreen.png');
+                width: 38px;
+                float: right;
+            }
+</style>

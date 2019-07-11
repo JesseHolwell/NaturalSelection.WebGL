@@ -6,6 +6,7 @@
     <title>Jerry's Fishtank</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <!--<link rel="manifest" href="manifest.json">-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/700c7a8f41.js"></script>
@@ -18,7 +19,7 @@
 
 /**/</script>
 </head>
-<body>
+<body id="container">
     <div class="webgl-content">
         <div id="unityContainer"></div>
         <!--      <div id="unityContainer" style="width: 960px; height: 600px"></div>-->
@@ -45,14 +46,69 @@
         <!-- TODO: actual info page -->
 
         <div class="info-content">
-            <div style="text-align: left; margin-left: 80px">gh</div>
+            <!--<div style="        text-align: left;
+            margin-left: 80px">gh</div>
 
-            <div style="width: 300%; text-align: left; transform: translate(-20%,0%);">j</div>
+                <div style="        width: 300%;
+            text-align: left;
+            transform: translate(-20%,0%);">j</div>
 
-            <div style="margin-right:8%">Hi my name is Jesse.</div>
-            <div style="margin-bottom: 3%;">how the fuck are ya cunt?</div>
-            <div style="margin-left:8%; margin-bottom: 6%">I love playing god withf</div>
-            <div style="margin-bottom: 10%; text-align:left">fucking fish daaaawg</div>
+                <div style="        margin-right: 8%">Hi my name is Jesse.</div>
+                <div style="        margin-bottom: 3%;">how the fuck are ya cunt?</div>
+                <div style="        margin-left: 8%;
+            margin-bottom: 6%">I love playing god withf</div>
+                <div style="        margin-bottom: 10%;
+            text-align: left">fucking fish daaaawg</div>-->
+            <!--<div>
+                vision:
+                a virtual fishtank
+                built using Unity and C#, running on WebGL.
+
+                goals:
+                simulate biology and evolution
+                increase my understanding of evolution
+                build a program using unity
+                improve my programming skills
+
+                how it works:
+                large fish are males
+                skinny fish are females
+                fish will grow up and age
+                constantly seeking food to keep their energy levels up
+                if energy drops too low, or they get old enough, they will die
+                once they are old enough they will become fertile and occasionally seek a mate
+                after mating females become pregnant and will soon lay an egg,
+                the egg will will hatch a new baby fish
+                the baby fish contains a combination of genes from both parents, sometimes with slight mutations
+                these mutations can be for better or worse, which enables better fish to eat more, and reproduce more
+                which furthers their genetic line.
+
+                and life goes on.
+
+                Link: https://fish-tank.azurewebsites.net/
+
+            </div>-->
+
+            <div>
+                <p>A virtual fishtank I built using Unity and C#, running on WebGL.</p>
+                <p>My goals were to: simulate biology and evolution to increase my understanding of the mechanics of evolution, and to build a program using Unity, to improve my programming skills.</p>
+
+                <div class="how">
+                    <p>How it works:</p>
+                    <p>Large fish are males, and skinny fish are females.</p>
+                    <p>Fish will grow up and age, seeking food when their energy levels get too low.</p>
+                    <p>If their energy drops too low, or they get old enough, they will die.</p>
+                    <p>Once they are old enough they will become fertile and occasionally seek a mate.</p>
+                    <p>After mating, females become pregnant and will soon lay an egg,</p>
+                    <p>The egg will will hatch a new baby fish.</p>
+                    <p>The baby fish contains a combination of genes from both parents, sometimes with slight mutations</p>
+                    <p>These mutations can be for better or worse, which enables better fish to eat more, and reproduce more</p>
+                    <p>which furthers their genetic line.</p>
+                </div>
+
+
+                <!--<a href="https://fish-tank.azurewebsites.net/">fish-tank.azurewebsites.net</a>-->
+            </div>
 
             <a href="https://jesseholwell.azurewebsites.net" class="my-link">
                 <span>Made with <i class="fa fa-heart"></i> by Jesse</span>
@@ -86,18 +142,49 @@
 
 <style>
 
+    /*#container {
+        display: block;
+    }
+
+    @media only screen and (orientation:portrait) {
+
+        #container {
+            height: 100vw;
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+    }
+
+    @media only screen and (orientation:landscape) {
+
+        #container {
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+    }*/
+
     body {
         /*background-image: radial-gradient(circle, #c85c91, #0ab399, #1299ad);*/
         background-color: #c85c91;
         overflow: hidden;
     }
 
-    a.my-link {
+    .info a {
         margin-top: 10%;
         color: white;
         text-decoration: underline;
-        font-size: .5em;
+        /*font-size: .5em;*/
     }
+
+        .info a:hover {
+            color: cyan;
+        }
 
     .typewriter {
         font-family: Courier New, Courier, monospace;
@@ -109,10 +196,18 @@
         width: 100%;
         background-color: #fc715d;
         color: #1c19a9;
-        font-size: 3em;
+        font-size: 1em;
         display: none;
         text-align: center;
         vertical-align: middle
+    }
+
+    .info .how {
+        margin-bottom:10%;
+    }
+
+    .info .how p {
+        margin-bottom:0rem;
     }
 
         .info.info-top {

@@ -6,6 +6,7 @@
     <title>Jerry's Fishtank</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <!--<link rel="manifest" href="manifest.json">-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/700c7a8f41.js"></script>
@@ -18,7 +19,7 @@
 
 /**/</script>
 </head>
-<body>
+<body id="container">
     <div class="webgl-content">
         <div id="unityContainer"></div>
         <!--      <div id="unityContainer" style="width: 960px; height: 600px"></div>-->
@@ -93,6 +94,33 @@
 
 <style>
 
+    /*#container {
+        display: block;
+    }
+
+    @media only screen and (orientation:portrait) {
+
+        #container {
+            height: 100vw;
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+    }
+
+    @media only screen and (orientation:landscape) {
+
+        #container {
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+    }*/
+
     body {
         /*background-image: radial-gradient(circle, #c85c91, #0ab399, #1299ad);*/
         background-color: #c85c91;
@@ -103,8 +131,12 @@
         margin-top: 10%;
         color: white;
         text-decoration: underline;
-        font-size: .5em;
+        /*font-size: .5em;*/
     }
+
+        .info a:hover {
+            color: cyan;
+        }
 
     .typewriter {
         font-family: Courier New, Courier, monospace;
@@ -116,10 +148,18 @@
         width: 100%;
         background-color: #fc715d;
         color: #1c19a9;
-        font-size: 3em;
+        font-size: 1em;
         display: none;
         text-align: center;
         vertical-align: middle
+    }
+
+    .info .how {
+        margin-bottom:10%;
+    }
+
+    .info .how p {
+        margin-bottom:0rem;
     }
 
         .info.info-top {

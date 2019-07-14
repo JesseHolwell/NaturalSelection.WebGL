@@ -1,10 +1,10 @@
 {
-"companyName": "Jesse",
+"companyName": "Jesse Holwell",
 "productName": "Virtual Fishtank",
 "productVersion": "0.1",
-"dataUrl": "Web3.data.unityweb",
-"wasmCodeUrl": "Web3.wasm.code.unityweb",
-"wasmFrameworkUrl": "Web3.wasm.framework.unityweb",
+"dataUrl": "WebReloaded.data.unityweb",
+"wasmCodeUrl": "WebReloaded.wasm.code.unityweb",
+"wasmFrameworkUrl": "WebReloaded.wasm.framework.unityweb",
 "graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
 "webglContextAttributes": {"preserveDrawingBuffer": false},
 "splashScreenStyle": "Dark",
@@ -12,5 +12,5 @@
 "cacheControl": {"default": "must-revalidate"},
 "developmentBuild": false,
 "multithreading": false,
-"unityVersion": "2019.1.0f2"
+"unityVersion": "2019.1.10f1"
 }
